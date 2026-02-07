@@ -1,11 +1,8 @@
 class Solution {
-   public int numSubarraysWithSum(int[] nums, int goal) {
-        if (goal == 0) {
-            return atMost(nums, 0); // only count subarrays with sum = 0
-        }
-        return atMost(nums, goal) - atMost(nums, goal - 1);
-    }
-      
+    public int numSubarraysWithSum(int[] nums, int goal) {
+        if(goal==0) return atMost(nums,0);
+     return atMost(nums,goal)-atMost(nums,goal-1);
+    }       
     private int atMost(int[] nums,int goal)
     {
         int left=0;
